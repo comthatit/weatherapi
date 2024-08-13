@@ -4,7 +4,7 @@ var cors = require('cors')
 
 app.use(cors())
 app.get('/', (req, res) => {
-  res.send('city weather infomation')
+  res.send('city weather information')
 })
 app.get('/:city' , (req, res) => {
   const p = req.params
@@ -15,7 +15,7 @@ app.get('/:city' , (req, res) => {
   }else if(p.city == 'jeju'){
     res.json({'temperature' : '32', 'humidity' : '40'})
   }else{
-    res.json({'temperature' : 'x', 'humidity' : 'x'})
+    res.json({'temperature' : '알 수 없음', 'humidity' : '알 수 없음'})
   }
 })
 
